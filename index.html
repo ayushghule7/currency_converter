@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        crossorigin="anonymous" />
+</head>
+<body>
+  <form class="card" id="converter-form">
+    <h1>Currency Converter</h1>
+
+    <label>Amount</label>
+    <input id="amount" type="number" value="100" min="0" />
+
+    <div class="row">
+      <div class="select-box">
+        <label>From</label>
+        <div class="select-container">
+          <img id="flag-from" src="https://flagsapi.com/US/flat/64.png" alt="flag">
+          <div class="select-block">
+            <select name="from" id="from-select"></select>
+            <div class="country-name" id="from-name"></div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" id="swap" title="Swap currencies" class="swap-btn">
+        <i class="fa-solid fa-right-left"></i>
+      </button>
+
+      <div class="select-box">
+        <label>To</label>
+        <div class="select-container">
+          <img id="flag-to" src="https://flagsapi.com/IN/flat/64.png" alt="flag">
+          <div class="select-block">
+            <select name="to" id="to-select"></select>
+            <div class="country-name" id="to-name"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="msg" id="result">--</div>
+    <div class="controls">
+      <button id="convert" type="submit">Convert</button>
+    </div>
+
+    <div class="note" id="note"></div>
+  </form>
+
+  <script src="codes.js"></script>
+  <script src="first.js"></script>
+</body>
+</html>
